@@ -1,6 +1,12 @@
 import { useCountUp } from '../hooks/useCountUp'
 
-const personalInfo = [
+type PersonalInfoItem = {
+  label: string
+  value: string
+  isStatus?: boolean
+}
+
+const personalInfo: PersonalInfoItem[] = [
   { label: 'Name', value: 'Ahamed Arkam' },
   { label: 'Email', value: 'arkamahamed01@gmail.com' },
   { label: 'Phone', value: '+94 76 086 6228' },
@@ -85,11 +91,7 @@ export default function About() {
               {personalInfo.map((item, i) => (
                 <div key={i} className="reveal" style={{ transitionDelay: `${0.3 + i * 0.08}s` }}>
                   <span className="text-[14px] font-semibold text-[#a0a0a0]">{item.label}: </span>
-                  {item.isStatus ? (
-                    <span className="text-[14px] font-normal text-[#10b981]">{item.value}</span>
-                  ) : (
-                    <span className="text-[14px] font-normal text-white">{item.value}</span>
-                  )}
+                  <span className="text-[14px] font-normal text-white">{item.value}</span>
                 </div>
               ))}
             </div>
