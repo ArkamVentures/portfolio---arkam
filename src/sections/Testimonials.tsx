@@ -1,27 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 
 const testimonials = [
-  {
-    quote:
-      'Working with John was an absolute pleasure. He delivered a stunning website that exceeded our expectations. His attention to detail and technical expertise are truly impressive.',
-    name: 'Sarah Johnson',
-    role: 'CEO, TechStart Inc.',
-    avatar: './assets/testimonial-1.jpg',
-  },
-  {
-    quote:
-      "Exceptional work on our e-commerce platform. The site is fast, user-friendly, and our sales have increased by 40% since launch. Highly recommended!",
-    name: 'Michael Chen',
-    role: 'Product Manager, ShopMart',
-    avatar: './assets/testimonial-2.jpg',
-  },
-  {
-    quote:
-      "John's design skills are outstanding. He transformed our outdated website into a modern, beautiful platform that our customers love. Great communication throughout the project.",
-    name: 'Emily Rodriguez',
-    role: 'Marketing Director, Creative Co.',
-    avatar: './assets/testimonial-3.jpg',
-  },
 ]
 
 export default function Testimonials() {
@@ -68,11 +47,6 @@ export default function Testimonials() {
       />
 
       <div className="max-w-[800px] mx-auto px-5 md:px-10 lg:px-[60px] relative z-10">
-        {/* Section Title */}
-        <div className="section-title reveal">
-          <h2>What Clients Say</h2>
-          <div className="title-underline" />
-        </div>
 
         {/* Testimonial Slider */}
         <div

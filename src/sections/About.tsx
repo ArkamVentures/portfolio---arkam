@@ -9,8 +9,6 @@ type PersonalInfoItem = {
 const personalInfo: PersonalInfoItem[] = [
   { label: 'Name', value: 'Ahamed Arkam' },
   { label: 'Email', value: 'arkamahamed01@gmail.com' },
-  { label: 'Phone', value: '+94 76 086 6228' },
-  { label: 'Location', value: '88/9, Samsudeen Road, Dharga Town' },
 ]
 
 const stats = [

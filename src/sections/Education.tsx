@@ -42,7 +42,7 @@ const timelineItems = [
     org: 'Royal Money Mart (Pvt) Ltd',
     icon: 'fas fa-briefcase',
     description:
-      'Managed front desk operations, assisted customers with currency exchange, handled cash and payment transactions accurately, and maintained daily sales and financial records.',
+      'Managed front desk operations, handled currency exchange and payment transactions accurately, and maintained daily sales and financial records.',
   },
   {
     side: 'right' as const,
@@ -51,7 +51,7 @@ const timelineItems = [
     org: 'Port City BPO',
     icon: 'fas fa-briefcase',
     description:
-      'Performed data entry, resolved inquiries and discrepancies, and ensured smooth operations with excellent customer service and compliance with company procedures.',
+      'Performed data entry, resolved inquiries and discrepancies, and ensured smooth operations with strong operational compliance with company procedures.',
   },
 ]
 

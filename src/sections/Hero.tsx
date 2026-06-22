@@ -1,12 +1,11 @@
 import { useTypingEffect } from '../hooks/useTypingEffect'
 
-const professions = ['Mechatronics Engineering Student', 'NDT IT Trainee', 'Customer Service Professional']
+const professions = ['Mechatronics Engineering Student', 'IT Student', 'Entrepreneur']
 
 const socialLinks = [
-  { icon: 'fab fa-linkedin-in', href: '#' },
-  { icon: 'fab fa-facebook-f', href: '#' },
-  { icon: 'fab fa-instagram', href: '#' },
-  { icon: 'fab fa-x-twitter', href: '#' },
+  { icon: 'fab fa-github', href: 'https://github.com/ArkamVentures' },
+  { icon: 'fab fa-linkedin-in', href: 'https://www.linkedin.com/in/arkam-ahamed-237431203?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
+  { icon: 'fab fa-instagram', href: 'https://www.instagram.com/arkamm01?utm_source=qr&igsh=cWsxODNmeDlwM2x1' },
 ]
 
 export default function Hero() {
@@ -86,7 +85,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 reveal" style={{ transitionDelay: '1.2s' }}>
-              <a href="#" className="gradient-btn" download>
+              <a href="/assets/cv.jpg" className="gradient-btn" download="Ahamed_Arkam_CV.jpg">
                 <i className="fas fa-download" /> Download CV
               </a>
               <a href="#contact" className="outline-btn" onClick={(e) => handleScroll(e, '#contact')}>

@@ -1,18 +1,18 @@
 import { useState, useEffect, useRef } from 'react'
 
 const technicalSkills = [
-  { name: 'MS Office / Excel', percent: 95 },
-  { name: 'Data Entry', percent: 90 },
-  { name: 'Record Management', percent: 88 },
-  { name: 'Basic Accounting', percent: 82 },
-  { name: 'IT Troubleshooting', percent: 78 },
-  { name: 'Documentation', percent: 84 },
+  { name: 'Programming: Java, Python, C', percent: 95 },
+  { name: 'Web Development: HTML, CSS, JavaScript, PHP', percent: 90 },
+  { name: 'Database: MySQL', percent: 88 },
+  { name: 'Tools & Technologies: Git, GitHub, VS Code', percent: 92 },
+  { name: 'Operating Systems: Windows, Linux', percent: 85 },
+  { name: 'Microsoft Office Suite', percent: 80 },
 ]
 
 const professionalSkills = [
   { name: 'Communication & Interpersonal', percent: 92 },
   { name: 'Operations Management', percent: 88 },
-  { name: 'Customer Service', percent: 90 },
+  { name: 'Problem Solving', percent: 90 },
   { name: 'Attention to Detail', percent: 90 },
 ]
 

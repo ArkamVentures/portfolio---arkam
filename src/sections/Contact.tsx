@@ -3,8 +3,6 @@ import type { FormEvent } from 'react'
 
 const contactInfo = [
   { icon: 'fas fa-envelope', label: 'Email', value: 'arkamahamed01@gmail.com', href: 'mailto:arkamahamed01@gmail.com' },
-  { icon: 'fas fa-phone', label: 'Phone', value: '+94 76 086 6228', href: 'tel:+94760866228' },
-  { icon: 'fas fa-map-marker-alt', label: 'Location', value: '88/9, Samsudeen Road, Dharga Town', href: '#' },
 ]
 
 const socialLinks = [
@@ -207,23 +205,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map Embed */}
-            <div className="mt-6 reveal" style={{ transitionDelay: '0.5s' }}>
-              <iframe
-                src="https://www.google.com/maps?q=Dharga+Town,+Sri+Lanka&output=embed"
-                width="100%"
-                height="200"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  borderRadius: '12px',
-                  filter: 'grayscale(100%) invert(92%) contrast(83%)',
-                }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Location Map"
-              />
-            </div>
           </div>
         </div>
       </div>
