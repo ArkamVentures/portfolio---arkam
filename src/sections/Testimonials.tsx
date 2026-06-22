@@ -1,6 +1,20 @@
 import { useState, useEffect, useCallback } from 'react'
 
 const testimonials = [
+  {
+    quote:
+      'Working with John was an absolute pleasure. He delivered a stunning website that exceeded our expectations. His attention to detail and technical expertise are truly impressive.',
+    name: 'Sarah Johnson',
+    role: 'CEO, TechStart Inc.',
+    avatar: './assets/testimonial-1.jpg',
+  },
+  {
+    quote:
+      "Exceptional work on our e-commerce platform. The site is fast, user-friendly, and our sales have increased by 40% since launch. Highly recommended!",
+    name: 'Michael Chen',
+    role: 'Product Manager, ShopMart',
+    avatar: './assets/testimonial-2.jpg',
+  },
 ]
 
 export default function Testimonials() {
@@ -47,7 +61,6 @@ export default function Testimonials() {
       />
 
       <div className="max-w-[800px] mx-auto px-5 md:px-10 lg:px-[60px] relative z-10">
-
         {/* Testimonial Slider */}
         <div
           className="relative reveal"
