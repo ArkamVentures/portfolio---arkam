@@ -187,23 +187,6 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Social Links */}
-            <div className="mt-8 reveal" style={{ transitionDelay: '0.5s' }}>
-              <h4 className="text-[16px] font-semibold text-white mb-3">Follow Me</h4>
-              <div className="flex items-center gap-[10px]">
-                {socialLinks.map((link, i) => (
-                  <a
-                    key={i}
-                    href={link.href}
-                    className="social-icon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className={link.icon} />
-                  </a>
-                ))}
-              </div>
-            </div>
 
           </div>
         </div>

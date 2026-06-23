@@ -1,4 +1,4 @@
-const timelineItems = [
+const educationItems = [
   {
     side: 'left' as const,
     date: '2020',
@@ -35,6 +35,9 @@ const timelineItems = [
     description:
       'Studying non-destructive testing and information technology concepts to support future work in industrial automation and system reliability.',
   },
+]
+
+const experienceItems = [
   {
     side: 'left' as const,
     date: 'March 2024 - September 2025',
@@ -55,10 +58,45 @@ const timelineItems = [
   },
 ]
 
+function TimelineItem({ item, index }: { item: (typeof educationItems)[0]; index: number }) {
+  return (
+    <div
+      key={index}
+      className={`relative flex items-start ${
+        item.side === 'left' ? 'md:flex-row reveal-left' : 'md:flex-row-reverse reveal-right'
+      }`}
+      style={{ transitionDelay: `${0.2 + index * 0.2}s` }}
+    >
+      <div
+        className="absolute left-5 md:left-1/2 w-4 h-4 rounded-full -translate-x-1/2 z-10 mt-6"
+        style={{
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          border: '3px solid #111111',
+        }}
+      />
+
+      <div
+        className={`ml-12 md:ml-0 md:w-[45%] ${
+          item.side === 'left' ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
+        }`}
+      >
+        <div className="glass-card p-5 md:p-6 hover:border-[rgba(255,255,255,0.2)] hover:-translate-y-[3px]">
+          <div className="text-[14px] font-semibold gradient-text mb-2">{item.date}</div>
+          <h3 className="text-[18px] font-semibold text-white mb-1">{item.title}</h3>
+          <div className="text-[14px] text-[#a0a0a0] mb-3">
+            <i className={`${item.icon} mr-2`} />
+            {item.org}
+          </div>
+          <p className="text-[14px] text-[#a0a0a0] leading-[1.6]">{item.description}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Education() {
   return (
     <section id="education" className="relative py-[60px] md:py-[80px] lg:py-[100px] bg-[#111111] overflow-hidden">
-      {/* Decorative gradient circle */}
       <div
         className="absolute top-1/2 left-1/2 w-[250px] h-[250px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2"
         style={{
@@ -67,66 +105,52 @@ export default function Education() {
         }}
       />
 
-      <div className="max-w-[1000px] mx-auto px-5 md:px-10 lg:px-[60px] relative z-10">
-        {/* Section Title */}
-        <div className="section-title reveal">
-          <h2>Education & Experience</h2>
-          <div className="title-underline" />
+      <div className="max-w-[1000px] mx-auto px-5 md:px-10 lg:px-[60px] relative z-10 space-y-16">
+        <div>
+          <div className="section-title reveal">
+            <h2>Education</h2>
+            <div className="title-underline" />
+          </div>
+
+          <div className="relative">
+            <div
+              className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2"
+              style={{ background: 'linear-gradient(to bottom, #667eea, #764ba2)' }}
+            />
+            <div
+              className="md:hidden absolute left-5 top-0 bottom-0 w-[2px]"
+              style={{ background: 'linear-gradient(to bottom, #667eea, #764ba2)' }}
+            />
+
+            <div className="space-y-8 md:space-y-12">
+              {educationItems.map((item, i) => (
+                <TimelineItem key={i} item={item} index={i} />
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Central Line - Desktop */}
-          <div
-            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2"
-            style={{ background: 'linear-gradient(to bottom, #667eea, #764ba2)' }}
-          />
+        <div>
+          <div className="section-title reveal">
+            <h2>Experience</h2>
+            <div className="title-underline" />
+          </div>
 
-          {/* Central Line - Mobile */}
-          <div
-            className="md:hidden absolute left-5 top-0 bottom-0 w-[2px]"
-            style={{ background: 'linear-gradient(to bottom, #667eea, #764ba2)' }}
-          />
+          <div className="relative">
+            <div
+              className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2"
+              style={{ background: 'linear-gradient(to bottom, #667eea, #764ba2)' }}
+            />
+            <div
+              className="md:hidden absolute left-5 top-0 bottom-0 w-[2px]"
+              style={{ background: 'linear-gradient(to bottom, #667eea, #764ba2)' }}
+            />
 
-          {/* Timeline Items */}
-          <div className="space-y-8 md:space-y-12">
-            {timelineItems.map((item, i) => (
-              <div
-                key={i}
-                className={`relative flex items-start ${
-                  item.side === 'left'
-                    ? 'md:flex-row reveal-left'
-                    : 'md:flex-row-reverse reveal-right'
-                }`}
-                style={{ transitionDelay: `${0.2 + i * 0.2}s` }}
-              >
-                {/* Timeline Dot */}
-                <div
-                  className="absolute left-5 md:left-1/2 w-4 h-4 rounded-full -translate-x-1/2 z-10 mt-6"
-                  style={{
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    border: '3px solid #111111',
-                  }}
-                />
-
-                {/* Content Card */}
-                <div
-                  className={`ml-12 md:ml-0 md:w-[45%] ${
-                    item.side === 'left' ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                  }`}
-                >
-                  <div className="glass-card p-5 md:p-6 hover:border-[rgba(255,255,255,0.2)] hover:-translate-y-[3px]">
-                    <div className="text-[14px] font-semibold gradient-text mb-2">{item.date}</div>
-                    <h3 className="text-[18px] font-semibold text-white mb-1">{item.title}</h3>
-                    <div className="text-[14px] text-[#a0a0a0] mb-3">
-                      <i className={`${item.icon} mr-2`} />
-                      {item.org}
-                    </div>
-                    <p className="text-[14px] text-[#a0a0a0] leading-[1.6]">{item.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className="space-y-8 md:space-y-12">
+              {experienceItems.map((item, i) => (
+                <TimelineItem key={i} item={item} index={i} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
