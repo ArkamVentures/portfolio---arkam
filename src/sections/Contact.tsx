@@ -5,13 +5,6 @@ const contactInfo = [
   { icon: 'fas fa-envelope', label: 'Email', value: 'arkamahamed01@gmail.com', href: 'mailto:arkamahamed01@gmail.com' },
 ]
 
-const socialLinks = [
-  { icon: 'fab fa-github', href: '#' },
-  { icon: 'fab fa-linkedin-in', href: '#' },
-  { icon: 'fab fa-x-twitter', href: '#' },
-  { icon: 'fab fa-instagram', href: '#' },
-  { icon: 'fab fa-facebook-f', href: '#' },
-]
 
 export default function Contact() {
   const [formState, setFormState] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
